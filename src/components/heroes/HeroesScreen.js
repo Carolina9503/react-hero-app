@@ -8,7 +8,9 @@ export const HeroesScreen = ({ history }) => {
     const {heroeId} = useParams();
     // const hero = getHeroById( heroeId );
 
-    const hero = useMemo(() => getHeroById( heroeId ), [heroeId])
+    const hero = useMemo(() => getHeroById( heroeId ), [heroeId]);
+
+    // console.log('Hero: ' , hero, 'HeroId:', heroeId); se hizo para testing
 
 
     if( !hero ){
@@ -17,7 +19,12 @@ export const HeroesScreen = ({ history }) => {
 
     const handleReturn = () => {
         // (history.length <= 2) ? histor   y.push('/'):history.goBack();
-         history.goBack();
+
+        if (history.length <= 2 ) {
+            history.push('/');
+        } else {
+            history.goBack();
+        }
 
     }
 

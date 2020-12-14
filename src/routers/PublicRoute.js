@@ -24,3 +24,5 @@ PublicRoute.prototype = {
     isAuthenticated: PropTypes.bool.isRequired,
     component: PropTypes.func.isRequired,
 }
+  
+

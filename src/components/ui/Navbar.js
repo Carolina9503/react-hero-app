@@ -12,7 +12,9 @@ export const Navbar = () => {
     // console.log(history);
 
     const handleLogout = () => {
-        history.push('/login'); 
+
+        // history.push('/login'); 
+        history.replace('/login');
         
         dispatch({
             type: types.logout, 
